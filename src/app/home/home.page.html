@@ -1,0 +1,22 @@
+<div class="fundo">
+    <div class="charada">
+        <div class="boxpergunta" [class.puff-in-center]="animacao">
+            <div class="pergunta">{{pergunta}}</div>   
+        </div>
+
+        <div *ngIf="mostrar" class="boxresposta" [class.puff-in-center]="animacao1">
+            <div *ngIf="mostrar" class="resposta">{{resposta}}</div>   
+        </div>
+    </div>
+    
+</div>
+
+<div class="botao">
+    <ion-button (click)="mostrarResposta()">
+        MOSTRAR RESPOSTA
+    </ion-button>
+    
+    <ion-button (click)="solicitarCharada()">
+        NOVA PERGUNTA
+    </ion-button>
+</div>
